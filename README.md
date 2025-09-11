@@ -20,9 +20,9 @@ Once I have this resolved I will remove this  from the disclaimer
 
 ## Usage:
 ```
-Usage: sudo ./wipe.sh -i gen6 -d /dev/sda
+Usage: sudo ./restore.sh -i gen6 -d /dev/sda
 
-Usage: sudo ./wipe.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2 -k clean
+Usage: sudo ./restore.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2 -k clean
 
   -i Specify which iPod model you are using. Automatically selects MBR and Firmware 
 	-d Specify which disk device to use. Example: -d /dev/sda
@@ -57,11 +57,11 @@ or you can use lsblk
 lsblk
 ```
 
-### Run the wipe.sh script
+### Run the restore.sh script
 
 Specify iPod model and device path:
 ```
-sudo ./wipe.sh -i gen6 -d /dev/sda
+sudo ./restore.sh -i gen6 -d /dev/sda
 ```
 
 Possible options for ipod models are as follows:
@@ -76,7 +76,7 @@ gen7 = iPod Classic 160gb Thin Model
 
 Usage:
 ```
-sudo ./wipe.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2
+sudo ./restore.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2
 ```
 Note that we do not specify the iPod version using this method.
 
@@ -85,11 +85,11 @@ This is for when you screw up and Rockbox isn't happy about that first parititio
 
 Usage:
 ```
-sudo ./wipe.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2 -k clean
+sudo ./restore.sh -d /dev/sda -m ./MBR/mbr-video80gb-2048.bin -f ./Firmware/Firmware-24.9.1.2 -k clean
 ```
 or 
 ```
-sudo ./wipe.sh -i gen6 -d /dev/sda -m -k clean
+sudo ./restore.sh -i gen6 -d /dev/sda -m -k clean
 ```
 
 ### Extracting Firmware from .ipsw file
