@@ -1,4 +1,4 @@
-# ipod-recover-script
+# ipod-recovery-script
 
 A simple script to recover iPods to factory firmware without iTunes
 This script only works on Linux due to limitations with MacOS Disk Utility not being able to see the first partition.
